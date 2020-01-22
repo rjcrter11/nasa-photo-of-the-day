@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <TitleBar img={logo} />
-      <DataCall />
+      <DataCall cardimg={logo} />
     </div>
   );
 }

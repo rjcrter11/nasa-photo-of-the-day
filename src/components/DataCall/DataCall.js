@@ -3,19 +3,19 @@ import axios from "axios";
 import SpaceCard from "../SpaceCard/SpaceCard";
 import "./DataCall.css";
 
-const DataCall = () => {
+const DataCall = (props) => {
   const [spaceImage, setSpaceImage] = useState([]);
-  // useEffect(() => {
-  //   axios
-  //     .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-  //     .then((response) => {
-  //       // console.log(response);
-  //       setSpaceImage(response.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log("Data not fetched", err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+      .then((response) => {
+        // console.log(response);
+        setSpaceImage(response.data);
+      })
+      .catch((err) => {
+        console.log("Data not fetched", err);
+      });
+  }, []);
 
   return (
     <div className="pic">
@@ -25,6 +25,7 @@ const DataCall = () => {
         desc={spaceImage.explanation}
         title={spaceImage.title}
         photo={spaceImage.url}
+        logoImage={props.cardimg}
       />
     </div>
   );
