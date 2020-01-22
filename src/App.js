@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
+import DataCall from "../src/components/DataCall/DataCall";
+
+import TitleBar from "../src/components/TitleBar/TitleBar";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <TitleBar />
+      <DataCall />
     </div>
   );
 }
