@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.logo-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: lightgray;
+}
+.image-wrapper {
+  width: 8%;
+}
+.heading-wrapper {
+  width: 50%;
+}
+.logo-image {
+  width: 100%;
+  height: auto;
+  padding-right: 3%;
+}
