@@ -6,7 +6,8 @@
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  background-color: lightgray;
+  padding: 0 2%;
+  background-color: rgba(14, 14, 14, 0.445);
 }
 .image-wrapper {
   width: 8%;
@@ -18,4 +19,8 @@
   width: 100%;
   height: auto;
   padding-right: 3%;
+}
+h1 {
+  color: white;
+  font-family: "Nunito", sans-serif;
 }
