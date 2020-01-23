@@ -31,8 +31,3 @@
     transform: rotate(360deg);
   }
 }
-.App {
-  background-image: url("../src/assets/nasa-background.jpg");
-  background-size: cover;
-  height: 140vh;
-}

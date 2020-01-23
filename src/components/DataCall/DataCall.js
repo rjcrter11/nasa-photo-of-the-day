@@ -30,23 +30,20 @@ const DataCall = (props) => {
       .catch((err) => {
         console.log("Data not fetched", err);
       });
-  }, [day, month, year]);
+  }, [year, month, day]);
 
   return (
-    <div className="pic">
-      <SpaceCard
-        key={spaceImage.date}
-        copyright={spaceImage.copyright}
-        date={spaceImage.date}
-        desc={spaceImage.explanation}
-        title={spaceImage.title}
-        photo={spaceImage.url}
-        logoImage={props.cardimg}
-        incrementDay={nextDay}
-        incrementMonth={nextMonth}
-        incrementYear={nextYear}
-      />
-    </div>
+    <SpaceCard
+      key={spaceImage.date}
+      copyright={spaceImage.copyright}
+      date={spaceImage.date}
+      desc={spaceImage.explanation}
+      title={spaceImage.title}
+      photo={spaceImage.url}
+      incrementDay={nextDay}
+      incrementMonth={nextMonth}
+      incrementYear={nextYear}
+    />
   );
 };
 

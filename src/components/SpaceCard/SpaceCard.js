@@ -1,55 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SpaceCard.css";
-import logo2 from "../../assets/nasa2.png";
-
-import SpaceCardBottom from "../SpaceCardBottom/SpaceCardBottom";
+import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from "reactstrap";
+import { Button, Col } from "reactstrap";
 
 const SpaceCard = (props) => {
-  const [showContent, setShowContent] = useState(false);
-  const toggleContent = () => setShowContent(!showContent);
-
   return (
-    <div className="daily-pic">
-      <div className="card-container">
-        <div className="button-container">
-          <button className="date-picker" onClick={props.incrementYear}>
-            Year
-          </button>
-          <button className="date-picker" onClick={props.incrementMonth}>
-            Month
-          </button>
-          <button className="date-picker" onClick={props.incrementDay}>
-            Day
-          </button>
-        </div>
+    <div>
+      <Card inverse style={{ backgroundColor: "black", borderColor: "black" }}>
+        <CardImg width="100%" src={props.photo} alt="A Picture a day" />
+        <CardImgOverlay>
+          <Col
+            xs="12"
+            md={{ size: "6", offset: 3 }}
+            xl={{ size: "6", offset: 3 }}
+          >
+            <CardTitle>{props.title}</CardTitle>
+            <CardTitle>{props.date}</CardTitle>
+            <CardText>{props.desc}</CardText>
+            <CardText>
+              <small className="text-muted">{props.copyright}</small>
+            </CardText>
+          </Col>
 
-        <div className="image-container">
-          <img src={props.photo} alt="APOD" />
-        </div>
-
-        <div className="top-wrapper">
-          <div className="icon-wrapper">
-            <img src={logo2} alt="icon" />
-          </div>
-          <div className="header-container">
-            <div className="header">
-              <h2>{props.title}</h2>
-              <span> {props.date}</span>
-            </div>
-          </div>
-          <div className="toggle-container">
-            <i className="fas fa-ellipsis-v" onClick={toggleContent} />
-          </div>
-        </div>
-
-        {showContent && (
-          <SpaceCardBottom
-            copyright={props.copyright}
-            desc={props.desc}
-            onClick={toggleContent}
-          />
-        )}
-      </div>
+          <Col xl="12">
+            <Button color="primary" onClick={props.incrementYear}>
+              Change Year
+            </Button>{" "}
+            <Button color="secondary" onClick={props.incrementMonth}>
+              Change Month
+            </Button>{" "}
+            <Button color="success" onClick={props.incrementDay}>
+              Change Day{" "}
+            </Button>{" "}
+          </Col>
+        </CardImgOverlay>
+      </Card>
     </div>
   );
 };
