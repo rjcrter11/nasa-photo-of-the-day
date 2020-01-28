@@ -1,0 +1,110 @@
+/* * {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+.daily-pic {
+  margin-bottom: 10%;
+}
+
+.card-container {
+  margin: 0 auto;
+  width: 45%;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(160, 160, 160, 0.747);
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 4% 0;
+}
+.date-picker {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: rgb(10, 91, 172);
+  color: white;
+  border: 1px solid white;
+}
+.date-picker:hover {
+  background-color: white;
+  color: dodgerblue;
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  padding-right: 6%;
+  margin-right: 10%;
+}
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+
+  margin-bottom: 5%;
+}
+
+.icon-wrapper {
+  width: 28%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.icon-wrapper img {
+  width: 90%;
+  height: auto;
+  padding: 4%;
+  padding-right: 5%;
+  margin-right: 5%;
+}
+h2 {
+  width: 100%;
+  text-align: start;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+.image-container {
+  width: 100%;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.description-container p {
+  padding: 5% 2%;
+  margin: 4% 4%;
+  text-align: left;
+  border-top: 1px solid rgb(158, 157, 157);
+}
+
+.credits p {
+  padding-bottom: 3%;
+  padding-left: 6%;
+  text-align: left;
+  font-weight: bold;
+}
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4% 3%;
+  width: 7%;
+}
+.fa-ellipsis-v {
+  font-size: 38px;
+}
+.fa-ellipsis-v:hover {
+  color: rgb(0, 153, 255);
+} */
